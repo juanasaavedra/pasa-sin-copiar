@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Pasa Sin Copiar</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pasa Sin Copiar</div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/bookings">Agendar Tutoría</a></li>
+                <li><a href="/courses">Cursos</a></li>
+                <li><a href="/guides">Guías</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title">Panel Administrativo</h1>
+        
+        <div id="message"></div>
+
+        <!-- Bookings Management -->
+        <div class="admin-section">
+            <h2>Gestión de Reservas</h2>
+            <div id="bookingsTable">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Courses Management -->
+        <div class="admin-section">
+            <h2>Gestión de Cursos</h2>
+            <button onclick="showCourseForm()" class="btn mb-2">Agregar Nuevo Curso</button>
+            
+            <form id="courseForm" class="hidden mb-2" style="background: #f9f9f9; padding: 1rem; border-radius: 4px;">
+                <input type="hidden" id="course_id" name="id">
+                <div class="form-group">
+                    <label for="course_title">Título *</label>
+                    <input type="text" id="course_title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="course_description">Descripción *</label>
+                    <textarea id="course_description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="course_duration">Duración *</label>
+                    <input type="text" id="course_duration" name="duration" placeholder="ej: 8 semanas" required>
+                </div>
+                <div class="form-group">
+                    <label for="course_price">Precio *</label>
+                    <input type="number" id="course_price" name="price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="course_image_url">URL de Imagen</label>
+                    <input type="text" id="course_image_url" name="image_url" placeholder="https://...">
+                </div>
+                <div class="flex gap-1">
+                    <button type="submit" class="btn">Guardar Curso</button>
+                    <button type="button" onclick="hideCourseForm()" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+            
+            <div id="coursesTable">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Enrollments -->
+        <div class="admin-section">
+            <h2>Inscripciones</h2>
+            <div id="enrollmentsTable">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Guides Management -->
+        <div class="admin-section">
+            <h2>Gestión de Guías</h2>
+            <button onclick="showGuideForm()" class="btn mb-2">Agregar Nueva Guía</button>
+            
+            <form id="guideForm" class="hidden mb-2" style="background: #f9f9f9; padding: 1rem; border-radius: 4px;">
+                <input type="hidden" id="guide_id" name="id">
+                <div class="form-group">
+                    <label for="guide_title">Título *</label>
+                    <input type="text" id="guide_title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="guide_description">Descripción *</label>
+                    <textarea id="guide_description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="guide_category">Categoría</label>
+                    <input type="text" id="guide_category" name="category" placeholder="ej: Matemáticas">
+                </div>
+                <div class="form-group">
+                    <label for="guide_preview_url">URL de Vista Previa</label>
+                    <input type="text" id="guide_preview_url" name="preview_url" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label for="guide_file_url">URL del Archivo *</label>
+                    <input type="text" id="guide_file_url" name="file_url" placeholder="https://..." required>
+                </div>
+                <div class="form-group">
+                    <label for="guide_price">Precio *</label>
+                    <input type="number" id="guide_price" name="price" step="0.01" required>
+                </div>
+                <div class="flex gap-1">
+                    <button type="submit" class="btn">Guardar Guía</button>
+                    <button type="button" onclick="hideGuideForm()" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+            
+            <div id="guidesTable">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Guide Purchases -->
+        <div class="admin-section">
+            <h2>Compras de Guías</h2>
+            <div id="purchasesTable">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pasa Sin Copiar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "pasa-sin-copiar",
+  "version": "1.0.0",
+  "description": "Plataforma integral de tutorías con Google Calendar, cursos y guías descargables",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": ["tutoring", "courses", "education", "calendar"],
+  "author": "Pasa Sin Copiar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "googleapis": "^161.0.0",
+    "nodemailer": "^7.0.9",
+    "sqlite3": "^5.1.7"
+  }
+}

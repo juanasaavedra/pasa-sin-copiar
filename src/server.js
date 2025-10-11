@@ -18,11 +18,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..')));
 
 // API Routes
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/guides', guideRoutes);
+
+// Config endpoint for calendar URL
+app.get('/api/config/calendar-url', (req, res) => {
+  const calendarUrl = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_URL || process.env.GOOGLE_CALENDAR_URL;
+  if (calendarUrl) {
+    res.json({ calendarUrl });
+  } else {
+    res.status(404).json({ error: 'Calendar URL not configured' });
+  }
+});
 
 // Serve HTML pages
 app.get('/', (req, res) => {
@@ -43,6 +54,10 @@ app.get('/courses', (req, res) => {
 
 app.get('/guides', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'guides.html'));
+});
+
+app.get('/tutorias', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'tutorias.html'));
 });
 
 // Health check endpoint

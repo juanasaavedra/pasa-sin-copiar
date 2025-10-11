@@ -20,6 +20,30 @@ const initAnimations = () => {
     }
 };
 
+const initRotatingSubtitle = () => {
+    const subtitleElement = document.getElementById('rotating-subtitle');
+    if (!subtitleElement) return;
+
+    const subtitles = [
+        'Aprende de verdad, no memorices',
+        'Domina conceptos. Aplica. Evoluciona',
+        'Tu éxito académico comienza aquí'
+    ];
+    let currentIndex = 0;
+
+    const updateSubtitle = () => {
+        subtitleElement.style.opacity = '0';
+        setTimeout(() => {
+            subtitleElement.textContent = subtitles[currentIndex];
+            subtitleElement.style.opacity = '1';
+            currentIndex = (currentIndex + 1) % subtitles.length;
+        }, 300);
+    };
+
+    updateSubtitle();
+    setInterval(updateSubtitle, 3000);
+};
+
 const initParallax = () => {
     const parallaxItems = document.querySelectorAll('[data-parallax]');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -70,4 +94,5 @@ window.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initParallax();
     initYear();
+    initRotatingSubtitle();
 });

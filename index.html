@@ -3,174 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasa sin Copiar - Aprende de verdad</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Pasa sin Copiar · Aprende de verdad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">Pasa sin Copiar</div>
-            <ul class="nav-menu">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#metodo">Método</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+    <header class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="hero-block hero-block--one" data-parallax data-parallax-speed="0.08"></div>
+            <div class="hero-block hero-block--two" data-parallax data-parallax-speed="0.12"></div>
+            <div class="hero-block hero-block--three" data-parallax data-parallax-speed="0.1"></div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title fade-in">Pasa sin Copiar</h1>
-                <p class="hero-subtitle slide-up">Aprende de verdad</p>
-                <p class="hero-description slide-up delay-1">
-                    Desarrolla habilidades auténticas y duraderas con tutorías personalizadas 
-                    que transforman tu forma de aprender
-                </p>
-                <div class="hero-buttons slide-up delay-2">
-                    <button class="btn btn-primary">Agendar tutoría</button>
-                    <button class="btn btn-secondary">Explorar</button>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card card-1"></div>
-                <div class="floating-card card-2"></div>
-                <div class="floating-card card-3"></div>
+        <div class="container hero-content" data-animate>
+            <span class="hero-logo">Pasa sin Copiar</span>
+            <h1 class="hero-title">Aprende de verdad, no memorices.</h1>
+            <p class="hero-subtitle">Tutorías y guías tecnológicas para dominar tus cursos con confianza.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="/tutorias">Agendar tutoría</a>
+                <a class="btn btn-secondary" href="/guias">Explorar guías</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Features Section -->
-    <section id="servicios" class="features">
-        <div class="container">
-            <h2 class="section-title">¿Por qué Pasa sin Copiar?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Aprendizaje Real</h3>
-                    <p>Metodología enfocada en la comprensión profunda, no en la memorización superficial</p>
+    <main>
+        <section class="section section-courses" id="cursos">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <p class="eyebrow">Proyectos y cursos</p>
+                    <h2>Domina habilidades con rutas guiadas</h2>
+                    <p class="section-description">Programas intensivos, acompañados y orientados a resultados reales desde el primer día.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Tutorías Personalizadas</h3>
-                    <p>Atención individualizada adaptada a tu ritmo y estilo de aprendizaje</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Resultados Garantizados</h3>
-                    <p>Estrategias probadas que generan resultados tangibles y duraderos</p>
+                <div class="course-grid">
+                    <article class="course-card" data-animate>
+                        <div class="card-body">
+                            <h3>LaTeX y Overleaf (4 semanas)</h3>
+                            <p>Aprende a crear documentos científicos impecables, automatiza citas y domina plantillas profesionales.</p>
+                            <a class="card-link" href="/cursos">Ver temario</a>
+                        </div>
+                        <a class="btn btn-primary" href="/tutorias">Inscribirme</a>
+                    </article>
+                    <article class="course-card" data-animate>
+                        <div class="card-body">
+                            <h3>Python desde cero (8 semanas)</h3>
+                            <p>Construye bases sólidas en programación, datos y automatización con proyectos aplicados a tu carrera.</p>
+                            <a class="card-link" href="/cursos">Ver temario</a>
+                        </div>
+                        <a class="btn btn-primary" href="/tutorias">Inscribirme</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Method Section -->
-    <section id="metodo" class="method">
-        <div class="container">
-            <div class="method-content">
-                <h2 class="section-title">Nuestro Método</h2>
-                <div class="method-steps">
-                    <div class="step-card">
-                        <span class="step-number">01</span>
-                        <h3>Evaluación Inicial</h3>
-                        <p>Identificamos tus fortalezas y áreas de oportunidad</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">02</span>
-                        <h3>Plan Personalizado</h3>
-                        <p>Diseñamos una estrategia adaptada a tus necesidades</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">03</span>
-                        <h3>Acompañamiento Continuo</h3>
-                        <p>Seguimiento y ajustes para garantizar tu progreso</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">04</span>
-                        <h3>Resultados Medibles</h3>
-                        <p>Evaluación constante de tu evolución académica</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonios" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Gracias a Pasa sin Copiar, no solo aprobé, sino que realmente entendí los conceptos. Ahora puedo aplicarlos en situaciones reales."</p>
-                    <div class="testimonial-author">
-                        <strong>María González</strong>
-                        <span>Estudiante de Ingeniería</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Las tutorías personalizadas cambiaron completamente mi forma de estudiar. Pasé de memorizar a comprender de verdad."</p>
-                    <div class="testimonial-author">
-                        <strong>Carlos Ramírez</strong>
-                        <span>Estudiante de Medicina</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"El método es excepcional. Finalmente encontré una forma de aprender que funciona para mí y me da confianza."</p>
-                    <div class="testimonial-author">
-                        <strong>Ana Torres</strong>
-                        <span>Estudiante de Derecho</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contacto" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>¿Listo para aprender de verdad?</h2>
-                <p>Agenda tu primera sesión y descubre el poder del aprendizaje auténtico</p>
-                <button class="btn btn-primary btn-large">Agendar tutoría ahora</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Pasa sin Copiar</h3>
-                    <p>Transformando el aprendizaje, una tutoría a la vez</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Enlaces</h4>
-                    <ul>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#metodo">Método</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+        <section class="section section-about" id="sobre">
+            <div class="container about-grid">
+                <div class="about-text" data-animate>
+                    <p class="eyebrow">Sobre Pasa sin Copiar</p>
+                    <h2>Aprender bien también es una habilidad</h2>
+                    <p>Unimos tutorías uno a uno, guías estratégicas y herramientas digitales para que avances con claridad.</p>
+                    <ul class="benefits-list">
+                        <li>Tutorías personalizadas con agenda flexible.</li>
+                        <li>Guías accionables y plantillas listas para usar.</li>
+                        <li>Integración directa con Google Calendar y recordatorios.</li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>info@pasasincopiar.com</p>
-                    <p>+1 (555) 123-4567</p>
+                <div class="about-visual" data-animate>
+                    <div class="about-mockup" aria-hidden="true">
+                        <div class="mockup-header">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-line mockup-line--accent"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line mockup-line--wide"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line mockup-line--accent"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Pasa sin Copiar. Todos los derechos reservados.</p>
+        </section>
+
+        <section class="section section-cta" id="contacto">
+            <div class="container">
+                <div class="cta-panel" data-animate>
+                    <div class="cta-content">
+                        <h2>Tu siguiente logro empieza hoy</h2>
+                        <p>Reserva una tutoría personalizada y diseña un plan claro para tus próximos desafíos.</p>
+                    </div>
+                    <a class="btn btn-primary btn-large" href="/tutorias">Agendar tutoría</a>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Pasa sin Copiar. Aprende de verdad.</p>
+            <nav class="footer-nav" aria-label="Enlaces de pie de página">
+                <a href="#cursos">Cursos</a>
+                <a href="#sobre">Beneficios</a>
+                <a href="/tutorias">Tutorías</a>
+            </nav>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>

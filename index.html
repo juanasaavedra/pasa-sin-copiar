@@ -1,120 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Pasa sin Copiar</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
-  </head>
-  <body>
-    <div class="bg-dots"></div>
-    <header class="hero">
-      <div class="hero-bg-cubes"></div>
-      <div class="container hero-content">
-        <div class="logo-tipografico">Pasa sin Copiar</div>
-        <h1>Aprende de verdad, no memorices.</h1>
-        <p class="subtitle">Domina conceptos. Aplica. Evoluciona.</p>
-        <div class="hero-buttons">
-          <button class="btn btn-accent" id="open-tutoria-modal" type="button">Agendar tutoría</button>
-          <a href="/guias" class="btn btn-outline">Explorar guías</a>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="section cursos">
-        <div class="container">
-          <h2>Cursos & Proyectos</h2>
-          <div class="cursos-grid">
-            <div class="curso-card">
-              <h3>LaTeX y Overleaf <span class="curso-duracion">(4 semanas)</span></h3>
-              <p>Aprende a crear documentos profesionales, artículos y presentaciones con LaTeX y Overleaf desde cero.</p>
-              <div class="curso-card-actions">
-                <a href="/cursos" class="link-underline">Ver temario</a>
-                <button class="btn btn-accent open-tutoria-modal" type="button">Inscribirme</button>
-              </div>
-            </div>
-            <div class="curso-card">
-              <h3>Python desde cero <span class="curso-duracion">(8 semanas)</span></h3>
-              <p>Iníciate en programación con Python, desde los fundamentos hasta aplicaciones prácticas y automatización.</p>
-              <div class="curso-card-actions">
-                <a href="/cursos" class="link-underline">Ver temario</a>
-                <button class="btn btn-accent open-tutoria-modal" type="button">Inscribirme</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section beneficios">
-        <div class="container beneficios-layout">
-          <div class="beneficios-text">
-            <h2>¿Por qué Pasa sin Copiar?</h2>
-            <ul>
-              <li><span class="beneficio-icon">👩‍🏫</span> Tutorías personalizadas y grupales</li>
-              <li><span class="beneficio-icon">📚</span> Guías originales y ejercicios prácticos</li>
-              <li><span class="beneficio-icon">📅</span> Agenda integrada con Google Calendar</li>
-            </ul>
-          </div>
-          <div class="beneficios-mock">
-            <div class="ui-mock-placeholder">
-              <div class="ui-mock-glow"></div>
-              <span class="ui-mock-text">Vista previa UI</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section cta-final">
-        <div class="container cta-final-content">
-          <h2>¿Listo para aprender de verdad?</h2>
-          <button class="btn btn-accent btn-lg" id="open-tutoria-modal-cta" type="button">Agendar tutoría</button>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container footer-content">
-        <span>&copy; 2025 Pasa sin Copiar</span>
-        <nav>
-          <a href="/tutorias">Tutorías</a>
-          <a href="/guias">Guías</a>
-          <a href="/cursos">Cursos</a>
-        </nav>
-      </div>
-    </footer>
-
-    <!-- Modal Agendar Tutoría -->
-    <div class="modal-bg" id="tutoria-modal-bg" hidden>
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tutoria-title">
-        <button class="modal-close" id="close-tutoria-modal" aria-label="Cerrar">&times;</button>
-        <h2 id="modal-tutoria-title">Agenda tu tutoría</h2>
-        <form id="tutoria-form" autocomplete="off">
-          <label>
-            Nombre completo
-            <input type="text" name="nombre" required>
-          </label>
-          <label>
-            Correo electrónico
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Fecha y hora preferida
-            <input type="datetime-local" name="fecha" required>
-          </label>
-          <label>
-            Comentarios
-            <textarea name="comentarios" rows="2" placeholder="¿Qué necesitas trabajar?"></textarea>
-          </label>
-          <!-- Aquí puedes conectar tu base de datos: enviar datos del formulario vía fetch/ajax -->
-          <button type="submit" class="btn btn-accent btn-block">Enviar solicitud</button>
-        </form>
-        <div id="tutoria-success" hidden>
-          <p>¡Solicitud enviada! Te contactaremos a la brevedad.</p>
-          <a id="tutoria-pago" href="#" class="btn btn-accent btn-lg btn-block" target="_blank" rel="noopener">Ir al pago</a>
-        </div>
-      </div>
-    </div>
-
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <button id="schedule-button">Agendar tutoría</button>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>

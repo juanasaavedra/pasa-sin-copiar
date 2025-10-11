@@ -66,8 +66,94 @@ const initYear = () => {
     }
 };
 
+const initRotatingSubtitle = () => {
+    const subtitleElement = document.getElementById('subtitle-rotativo');
+    if (!subtitleElement) return;
+    
+    const subtitles = [
+        'Tutorías personalizadas · Cursos completos · Guías descargables',
+        'Aprende de verdad, no memorices',
+        'Domina conceptos · Aplica · Evoluciona'
+    ];
+    
+    let currentIndex = 0;
+    
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % subtitles.length;
+        subtitleElement.style.opacity = '0';
+        
+        setTimeout(() => {
+            subtitleElement.textContent = subtitles[currentIndex];
+            subtitleElement.style.opacity = '1';
+        }, 300);
+    }, 4000);
+};
+
+const initModal = () => {
+    const modalBg = document.getElementById('tutoria-modal-bg');
+    const closeModalBtn = document.getElementById('close-tutoria-modal');
+    const openModalBtns = document.querySelectorAll('.open-tutoria-modal, #open-tutoria-modal, #open-tutoria-modal-cta');
+    const tutoriaForm = document.getElementById('tutoria-form');
+    const tutoriaSuccess = document.getElementById('tutoria-success');
+    
+    if (!modalBg) return;
+    
+    // Open modal
+    openModalBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalBg.removeAttribute('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    const closeModal = () => {
+        modalBg.setAttribute('hidden', '');
+        document.body.style.overflow = '';
+    };
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+    
+    modalBg.addEventListener('click', (e) => {
+        if (e.target === modalBg) {
+            closeModal();
+        }
+    });
+    
+    // Handle form submission
+    if (tutoriaForm) {
+        tutoriaForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your backend
+            // For now, we'll just show the success message
+            tutoriaForm.style.display = 'none';
+            if (tutoriaSuccess) {
+                tutoriaSuccess.removeAttribute('hidden');
+            }
+            
+            // Reset after a delay
+            setTimeout(() => {
+                closeModal();
+                setTimeout(() => {
+                    tutoriaForm.style.display = 'flex';
+                    if (tutoriaSuccess) {
+                        tutoriaSuccess.setAttribute('hidden', '');
+                    }
+                    tutoriaForm.reset();
+                }, 300);
+            }, 3000);
+        });
+    }
+};
+
 window.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initParallax();
     initYear();
+    initRotatingSubtitle();
+    initModal();
 });

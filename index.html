@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pasa sin Copiar</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles/globals.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
@@ -12,55 +12,84 @@
   <body>
     <div class="bg-dots"></div>
     <header class="hero">
-      <div class="hero-bg-cubes"></div>
-      <div class="container hero-content">
+      <div class="hero-content container">
         <div class="logo-tipografico">Pasa sin Copiar</div>
-        <h1>Aprende de verdad, no memorices.</h1>
-        <p class="subtitle">Domina conceptos. Aplica. Evoluciona.</p>
+        <h1>Pasa sin Copiar</h1>
+        <p class="subtitle" id="subtitle-rotativo">Tutorías personalizadas · Cursos completos · Guías descargables</p>
         <div class="hero-buttons">
-          <button class="btn btn-accent" id="open-tutoria-modal" type="button">Agendar tutoría</button>
-          <a href="/guias" class="btn btn-outline">Explorar guías</a>
+          <a href="#tutorias" class="btn btn-accent">Explorar tutorías</a>
+          <a href="#guias" class="btn btn-outline">Ver guías</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="section cursos">
+      <section class="section" id="servicios">
         <div class="container">
-          <h2>Cursos & Proyectos</h2>
-          <div class="cursos-grid">
-            <div class="curso-card">
-              <h3>LaTeX y Overleaf <span class="curso-duracion">(4 semanas)</span></h3>
-              <p>Aprende a crear documentos profesionales, artículos y presentaciones con LaTeX y Overleaf desde cero.</p>
-              <div class="curso-card-actions">
-                <a href="/cursos" class="link-underline">Ver temario</a>
-                <button class="btn btn-accent open-tutoria-modal" type="button">Inscribirme</button>
+          <h2>Nuestros Servicios</h2>
+          <div class="servicios-grid">
+            <div class="servicio-card">
+              <h3>📚 Tutorías Personalizadas</h3>
+              <p>Sesiones uno a uno adaptadas a tu ritmo de aprendizaje. Resuelve dudas, profundiza conceptos y avanza con confianza.</p>
+              <div class="servicio-card-actions">
+                <button class="btn btn-accent open-tutoria-modal" type="button">Agendar ahora</button>
               </div>
             </div>
-            <div class="curso-card">
-              <h3>Python desde cero <span class="curso-duracion">(8 semanas)</span></h3>
-              <p>Iníciate en programación con Python, desde los fundamentos hasta aplicaciones prácticas y automatización.</p>
-              <div class="curso-card-actions">
-                <a href="/cursos" class="link-underline">Ver temario</a>
-                <button class="btn btn-accent open-tutoria-modal" type="button">Inscribirme</button>
+            <div class="servicio-card">
+              <h3>🎓 Cursos Completos</h3>
+              <p>Programas estructurados con contenido actualizado. Desde fundamentos hasta aplicaciones avanzadas.</p>
+              <div class="servicio-card-actions">
+                <a href="/cursos" class="btn btn-accent">Ver cursos</a>
+              </div>
+            </div>
+            <div class="servicio-card">
+              <h3>📖 Guías Descargables</h3>
+              <p>Material de estudio detallado y bien organizado. Consulta offline cuando lo necesites.</p>
+              <div class="servicio-card-actions">
+                <a href="/guias" class="btn btn-accent">Explorar guías</a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section beneficios">
-        <div class="container beneficios-layout">
-          <div class="beneficios-text">
-            <h2>¿Por qué Pasa sin Copiar?</h2>
-            <ul>
-              <li><span class="beneficio-icon">👩‍🏫</span> Tutorías personalizadas y grupales</li>
-              <li><span class="beneficio-icon">📚</span> Guías originales y ejercicios prácticos</li>
-              <li><span class="beneficio-icon">📅</span> Agenda integrada con Google Calendar</li>
-            </ul>
+        <div class="container">
+          <h2>Beneficios de Aprender con Nosotros</h2>
+          <div class="beneficios-layout">
+            <div class="card">
+              <h3>🎯 Enfoque Personalizado</h3>
+              <p>Cada estudiante es único. Adaptamos nuestro método de enseñanza a tu estilo de aprendizaje y objetivos específicos.</p>
+            </div>
+            <div class="card">
+              <h3>⚡ Aprende Practicando</h3>
+              <p>No memorices, comprende. Ejercicios prácticos y proyectos reales que consolidan tu conocimiento.</p>
+            </div>
+            <div class="card">
+              <h3>🚀 Resultados Comprobados</h3>
+              <p>Metodología probada que ha ayudado a cientos de estudiantes a alcanzar sus metas académicas y profesionales.</p>
+            </div>
           </div>
-          <div class="beneficios-mock">
-            <div class="ui-mock-placeholder">
-              <div class="ui-mock-glow"></div>
-              <span class="ui-mock-text">Vista previa UI</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>¿Cómo Funciona?</h2>
+          <div class="como-funciona-grid">
+            <div class="paso-card">
+              <div class="paso-numero">1</div>
+              <h3>Agenda tu Sesión</h3>
+              <p>Elige el horario que mejor te convenga y reserva tu tutoría en segundos.</p>
+            </div>
+            <div class="paso-card">
+              <div class="paso-numero">2</div>
+              <h3>Prepara tus Dudas</h3>
+              <p>Identifica los temas que quieres trabajar para aprovechar al máximo la sesión.</p>
+            </div>
+            <div class="paso-card">
+              <div class="paso-numero">3</div>
+              <h3>Aprende y Avanza</h3>
+              <p>Recibe explicaciones claras, practica y consolida tu conocimiento.</p>
             </div>
           </div>
         </div>

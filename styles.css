@@ -586,3 +586,414 @@ button,
         transform: none !important;
     }
 }
+
+/* Rotating Subtitle */
+.rotating-subtitle {
+    transition: opacity 0.3s ease;
+    min-height: 2.5rem;
+}
+
+/* Services Section */
+.services {
+    background: linear-gradient(180deg, rgba(12, 19, 32, 0.2), transparent);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-block {
+    text-align: center;
+    padding: 2rem;
+}
+
+.service-block h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: var(--accent-2);
+}
+
+.service-block p {
+    color: var(--muted);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: clamp(5rem, 10vw, 8rem) 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+}
+
+.benefit-card p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background: radial-gradient(circle at center, rgba(12, 19, 32, 0.3), transparent);
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin-bottom: 3rem;
+    color: var(--ink);
+}
+
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--bg-1);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(90, 162, 255, 0.2), rgba(90, 162, 255, 0.1));
+    border: 2px solid var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-2);
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.step-arrow {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    position: relative;
+}
+
+.step-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--accent);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+@media (max-width: 768px) {
+    .step-arrow {
+        display: none;
+    }
+}
+
+/* CTA Final Section */
+.cta-final {
+    position: relative;
+    padding: clamp(6rem, 12vw, 10rem) 0;
+}
+
+.cta-final::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(90, 162, 255, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.cta-final-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-final-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    color: var(--ink);
+}
+
+.cta-final-content p {
+    color: var(--muted);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-final .btn-lg {
+    padding: 1.2rem 3rem;
+    font-size: 1.125rem;
+    box-shadow: 0 0 40px var(--glow);
+}
+
+/* Tutorias Page Styles */
+.tutorias-header {
+    background: radial-gradient(circle at 20% 20%, rgba(12, 19, 32, 0.9), rgba(7, 10, 18, 0.95));
+    padding: 4rem 0 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.tutorias-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(90, 162, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--accent-2);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.tutorias-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+    color: var(--muted);
+    font-size: 1.25rem;
+}
+
+/* Info Cards Section */
+.info-cards-section {
+    padding: 3rem 0;
+}
+
+.info-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    padding: 2rem;
+}
+
+.info-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-2);
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+    color: var(--muted);
+}
+
+.info-card li:last-child {
+    border-bottom: none;
+}
+
+.info-card strong {
+    color: var(--ink);
+}
+
+/* Scheduling Section */
+.scheduling-section {
+    padding: 4rem 0;
+    background: radial-gradient(circle at center, rgba(12, 19, 32, 0.2), transparent);
+}
+
+.scheduling-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    text-align: center;
+}
+
+.scheduling-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.scheduling-description {
+    color: var(--muted);
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+}
+
+.calendar-integration {
+    margin: 2rem 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-fallback-message {
+    padding: 2rem;
+    background: rgba(90, 162, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.calendar-fallback-message p {
+    color: var(--muted);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.scheduling-fallback {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.scheduling-fallback p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.contact-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 5rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 30px var(--glow);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: var(--bg-0);
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-2);
+    margin: 1.5rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-card li {
+    padding: 0.75rem 0;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.pricing-card li:last-child {
+    border-bottom: none;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    margin-top: 1.5rem;
+}

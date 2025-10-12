@@ -12,92 +12,89 @@
   <body>
     <div class="bg-dots"></div>
     <header class="hero">
-      <div class="hero-content container">
-        <div class="logo-tipografico">Pasa sin Copiar</div>
+      <div class="hero-bg-cubes"></div>
+      <div class="container hero-content">
         <h1>Pasa sin Copiar</h1>
-        <p class="subtitle" id="subtitle-rotativo">Tutorías personalizadas · Cursos completos · Guías descargables</p>
+        <h2 class="rotating-subtitle" id="rotating-subtitle"></h2>
         <div class="hero-buttons">
-          <a href="#tutorias" class="btn btn-accent">Explorar tutorías</a>
-          <a href="#guias" class="btn btn-outline">Ver guías</a>
+          <a href="/tutorias" class="btn btn-accent">Tutorías personalizadas</a>
+          <a href="/guias" class="btn btn-outline">Explorar guías</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="section" id="servicios">
+      <!-- Services Section -->
+      <section class="section services">
         <div class="container">
-          <h2>Nuestros Servicios</h2>
-          <div class="servicios-grid">
-            <div class="servicio-card">
-              <h3>📚 Tutorías Personalizadas</h3>
-              <p>Sesiones uno a uno adaptadas a tu ritmo de aprendizaje. Resuelve dudas, profundiza conceptos y avanza con confianza.</p>
-              <div class="servicio-card-actions">
-                <button class="btn btn-accent open-tutoria-modal" type="button">Agendar ahora</button>
-              </div>
+          <div class="services-grid">
+            <div class="service-block">
+              <h2>Tutorías</h2>
+              <p>Sesiones personalizadas adaptadas a tu ritmo y necesidades. Aprende con expertos que entienden tu camino.</p>
             </div>
-            <div class="servicio-card">
-              <h3>🎓 Cursos Completos</h3>
-              <p>Programas estructurados con contenido actualizado. Desde fundamentos hasta aplicaciones avanzadas.</p>
-              <div class="servicio-card-actions">
-                <a href="/cursos" class="btn btn-accent">Ver cursos</a>
-              </div>
+            <div class="service-block">
+              <h2>Guías</h2>
+              <p>Material didáctico original y práctico. Recursos diseñados para que aprendas haciendo, no memorizando.</p>
             </div>
-            <div class="servicio-card">
-              <h3>📖 Guías Descargables</h3>
-              <p>Material de estudio detallado y bien organizado. Consulta offline cuando lo necesites.</p>
-              <div class="servicio-card-actions">
-                <a href="/guias" class="btn btn-accent">Explorar guías</a>
-              </div>
+            <div class="service-block">
+              <h2>Cursos</h2>
+              <p>Programas completos con proyectos reales. Desarrolla habilidades aplicables desde el primer día.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section beneficios">
+      <!-- Benefits Section -->
+      <section class="section benefits">
         <div class="container">
-          <h2>Beneficios de Aprender con Nosotros</h2>
-          <div class="beneficios-layout">
-            <div class="card">
-              <h3>🎯 Enfoque Personalizado</h3>
-              <p>Cada estudiante es único. Adaptamos nuestro método de enseñanza a tu estilo de aprendizaje y objetivos específicos.</p>
+          <div class="benefits-grid">
+            <div class="card benefit-card">
+              <h3>Aprende haciendo</h3>
+              <p>Metodología práctica basada en proyectos reales. No solo teoría, sino aplicación directa de conceptos.</p>
             </div>
-            <div class="card">
-              <h3>⚡ Aprende Practicando</h3>
-              <p>No memorices, comprende. Ejercicios prácticos y proyectos reales que consolidan tu conocimiento.</p>
+            <div class="card benefit-card">
+              <h3>Flexibilidad total</h3>
+              <p>Agenda tus sesiones cuando mejor te funcione. Integración con Google Calendar para máxima comodidad.</p>
             </div>
-            <div class="card">
-              <h3>🚀 Resultados Comprobados</h3>
-              <p>Metodología probada que ha ayudado a cientos de estudiantes a alcanzar sus metas académicas y profesionales.</p>
+            <div class="card benefit-card">
+              <h3>Seguimiento continuo</h3>
+              <p>Acompañamiento constante en tu proceso de aprendizaje. Resuelve dudas y avanza con confianza.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <!-- How It Works Section -->
+      <section class="section how-it-works">
         <div class="container">
-          <h2>¿Cómo Funciona?</h2>
-          <div class="como-funciona-grid">
-            <div class="paso-card">
-              <div class="paso-numero">1</div>
-              <h3>Agenda tu Sesión</h3>
-              <p>Elige el horario que mejor te convenga y reserva tu tutoría en segundos.</p>
+          <h2 class="section-title">Cómo funciona</h2>
+          <div class="steps-container">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Agenda tu sesión</h3>
+              <p>Elige fecha y hora que mejor se ajuste a ti</p>
             </div>
-            <div class="paso-card">
-              <div class="paso-numero">2</div>
-              <h3>Prepara tus Dudas</h3>
-              <p>Identifica los temas que quieres trabajar para aprovechar al máximo la sesión.</p>
+            <div class="step-arrow"></div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Prepárate</h3>
+              <p>Recibe material y confirma tu asistencia</p>
             </div>
-            <div class="paso-card">
-              <div class="paso-numero">3</div>
-              <h3>Aprende y Avanza</h3>
-              <p>Recibe explicaciones claras, practica y consolida tu conocimiento.</p>
+            <div class="step-arrow"></div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Aprende y aplica</h3>
+              <p>Trabaja en casos reales con seguimiento continuo</p>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Final CTA Section -->
       <section class="section cta-final">
         <div class="container cta-final-content">
           <h2>¿Listo para aprender de verdad?</h2>
-          <button class="btn btn-accent btn-lg" id="open-tutoria-modal-cta" type="button">Agendar tutoría</button>
+          <p>Comienza tu camino hacia el dominio real de conceptos y habilidades</p>
+          <a href="/tutorias" class="btn btn-accent btn-lg">Agendar tutoría ahora</a>
         </div>
       </section>
     </main>
@@ -111,38 +108,6 @@
         </nav>
       </div>
     </footer>
-
-    <!-- Modal Agendar Tutoría -->
-    <div class="modal-bg" id="tutoria-modal-bg" hidden>
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tutoria-title">
-        <button class="modal-close" id="close-tutoria-modal" aria-label="Cerrar">&times;</button>
-        <h2 id="modal-tutoria-title">Agenda tu tutoría</h2>
-        <form id="tutoria-form" autocomplete="off">
-          <label>
-            Nombre completo
-            <input type="text" name="nombre" required>
-          </label>
-          <label>
-            Correo electrónico
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Fecha y hora preferida
-            <input type="datetime-local" name="fecha" required>
-          </label>
-          <label>
-            Comentarios
-            <textarea name="comentarios" rows="2" placeholder="¿Qué necesitas trabajar?"></textarea>
-          </label>
-          <!-- Aquí puedes conectar tu base de datos: enviar datos del formulario vía fetch/ajax -->
-          <button type="submit" class="btn btn-accent btn-block">Enviar solicitud</button>
-        </form>
-        <div id="tutoria-success" hidden>
-          <p>¡Solicitud enviada! Te contactaremos a la brevedad.</p>
-          <a id="tutoria-pago" href="#" class="btn btn-accent btn-lg btn-block" target="_blank" rel="noopener">Ir al pago</a>
-        </div>
-      </div>
-    </div>
 
     <script src="app.js"></script>
   </body>

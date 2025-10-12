@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tutorías Personalizadas - Pasa sin Copiar</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="bg-dots"></div>
+    <header class="tutorias-header">
+      <div class="container">
+        <a href="/" class="back-link">&larr; Volver al inicio</a>
+        <h1>Tutorías personalizadas</h1>
+        <p class="header-subtitle">Aprende a tu ritmo con sesiones diseñadas para ti</p>
+      </div>
+    </header>
+    
+    <main>
+      <!-- Info Cards Section -->
+      <section class="section info-cards-section">
+        <div class="container">
+          <div class="info-cards-grid">
+            <!-- Subjects Card -->
+            <div class="card info-card">
+              <h2>Materias disponibles</h2>
+              <ul class="subjects-list">
+                <li>Programación (Python, JavaScript, Java)</li>
+                <li>LaTeX y herramientas académicas</li>
+                <li>Matemáticas y Estadística</li>
+                <li>Estructuras de datos y algoritmos</li>
+                <li>Desarrollo web y aplicaciones</li>
+                <li>Ciencia de datos y Machine Learning</li>
+              </ul>
+            </div>
+
+            <!-- Formats Card -->
+            <div class="card info-card">
+              <h2>Formatos de sesión</h2>
+              <ul class="formats-list">
+                <li><strong>Individual</strong> - Atención personalizada uno a uno</li>
+                <li><strong>Grupal</strong> - Aprende junto a otros estudiantes</li>
+                <li><strong>Online</strong> - Desde cualquier lugar vía videollamada</li>
+                <li><strong>Presencial</strong> - Sesiones en persona (según disponibilidad)</li>
+                <li><strong>Flexible</strong> - Duración adaptable (60, 90, 120 min)</li>
+              </ul>
+            </div>
+
+            <!-- What You Get Card -->
+            <div class="card info-card">
+              <h2>Qué obtienes</h2>
+              <ul class="benefits-list">
+                <li>✓ Material de estudio personalizado</li>
+                <li>✓ Ejercicios prácticos adaptados</li>
+                <li>✓ Seguimiento de tu progreso</li>
+                <li>✓ Acceso a recursos complementarios</li>
+                <li>✓ Resolución de dudas entre sesiones</li>
+                <li>✓ Certificado de participación</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Session Scheduling Section -->
+      <section class="section scheduling-section">
+        <div class="container">
+          <div class="scheduling-card card">
+            <h2>Agenda tu sesión</h2>
+            <p class="scheduling-description">Elige el horario que mejor se ajuste a ti y comienza tu camino de aprendizaje</p>
+            
+            <div id="calendar-integration" class="calendar-integration">
+              <!-- Calendar will be loaded here -->
+            </div>
+
+            <div class="scheduling-fallback">
+              <p>¿Prefieres agendar por otro medio?</p>
+              <div class="contact-options">
+                <a href="mailto:contacto@pasasincopiar.com" class="btn btn-outline">
+                  Contactar por email
+                </a>
+                <a href="/bookings" class="btn btn-accent">
+                  Formulario de reserva
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="section pricing-section">
+        <div class="container">
+          <h2 class="section-title">Planes y precios</h2>
+          <div class="pricing-grid">
+            <div class="card pricing-card">
+              <h3>Sesión individual</h3>
+              <div class="price">$25<span>/hora</span></div>
+              <ul>
+                <li>Atención personalizada</li>
+                <li>Horario flexible</li>
+                <li>Material incluido</li>
+              </ul>
+              <a href="#calendar-integration" class="btn btn-accent">Agendar ahora</a>
+            </div>
+
+            <div class="card pricing-card featured">
+              <div class="featured-badge">Más popular</div>
+              <h3>Paquete 5 sesiones</h3>
+              <div class="price">$110<span>/paquete</span></div>
+              <ul>
+                <li>5 sesiones de 1 hora</li>
+                <li>Ahorra $15</li>
+                <li>Seguimiento continuo</li>
+              </ul>
+              <a href="#calendar-integration" class="btn btn-accent">Agendar ahora</a>
+            </div>
+
+            <div class="card pricing-card">
+              <h3>Paquete 10 sesiones</h3>
+              <div class="price">$200<span>/paquete</span></div>
+              <ul>
+                <li>10 sesiones de 1 hora</li>
+                <li>Ahorra $50</li>
+                <li>Proyecto personalizado</li>
+              </ul>
+              <a href="#calendar-integration" class="btn btn-accent">Agendar ahora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <span>&copy; 2025 Pasa sin Copiar</span>
+        <nav>
+          <a href="/tutorias">Tutorías</a>
+          <a href="/guias">Guías</a>
+          <a href="/cursos">Cursos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="tutorias.js"></script>
+  </body>
+</html>
